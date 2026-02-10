@@ -12,23 +12,28 @@ const days = [
     },
     {
       title: "Chocolate Day 🍫",
-      date: "2026-02-10",
+      date: "2026-02-09",
       msg: "Life feels sweeter with you."
     },
     {
       title: "Teddy Day 🧸",
-      date: "2026-02-11",
+      date: "2026-02-10",
       msg: "Comfort feels like you."
     },
     {
       title: "Promise Day 🤞",
-      date: "2026-02-12",
+      date: "2026-02-11",
       msg: "Saath rehne ka vaada."
     },
     {
       title: "Hug Day 🤗",
-      date: "2026-02-13",
+      date: "2026-02-12",
       msg: "Home is right here."
+    },
+    {
+        title : "Kiss Day 💋",
+        date: "2026-02-13",
+        msg: "Kissi lelo bb"
     },
     {
       title: "Valentine’s Day ❤️",
@@ -38,7 +43,10 @@ const days = [
   ];
   
   const cards = document.getElementById("cards");
-  const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleString("en-CA", {
+      timeZone: "Asia/Kolkata"
+    });
+
   
   days.forEach((day, i) => {
     const card = document.createElement("div");
